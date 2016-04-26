@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>NCI Wiki new account request</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">  
-  </head>
-  <body>
-    <div class="header">
-      <img src="static/img/logo.png" alt="NCI Wiki new account request" title="NCI Wiki new account request">
-    </div>
-   <a href="#maincontent" tabindex="0" class="skipnav">
-      <img height="1px" alt="Skip Menu" src="static/img/shim.gif" width="1" border="0">
-    </a>
-   
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel=
+    "stylesheet">
+</head>
+<body>
+    <div class="header"><img alt="NCI Wiki new account request" src=
+    "static/img/logo.png" title="NCI Wiki new account request"></div><a class=
+    "skipnav" href="#maincontent" tabindex="0"><img alt="Skip Menu" border="0"
+    height="1px" src="static/img/shim.gif" width="1"></a>
     <div class="container" id="maincontent">
-      {% block content %}
-      {% endblock %}
+        {% block content %} {% endblock %}
     </div>
     <div class="footer">
-      <p>
-         <a href="#" title="Home">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-         <a href="https://service.cancer.gov/selfservice/" title="Contact Us">Contact Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-         <a href="http://www.cancer.gov/global/web/policies" title="Policies">Policies</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-         <a href="http://www.cancer.gov/global/web/policies/accessibility" title="Accessibility">Accessibility
-         </a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://cancer.gov/global/viewing-files" target="_blank" title="Viewing Files">Viewing Files</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-         <a href="http://www.cancer.gov/global/web/policies/foia" title="FOIA">FOIA</a><br /><br />
-      </p>
-
-      <p>
-         <a href="http://www.dhhs.gov/">Department of Health and Human Services</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.nih.gov/">National Institutes of Health</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.cancer.gov/">National Cancer Institute</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.usa.gov/">USA.gov</a>
-      </p>
-
-      <p>
-      NIH...Turning Discovery Into Health
-      </p>
+        <p><a href="#" title="Home">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href=
+        "https://service.cancer.gov/selfservice/" title="Contact Us">Contact
+        Us</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href=
+        "http://www.cancer.gov/global/web/policies" title=
+        "Policies">Policies</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href=
+        "http://www.cancer.gov/global/web/policies/accessibility" title=
+        "Accessibility">Accessibility</a> &nbsp;&nbsp;|&nbsp;&nbsp;<a href=
+        "http://cancer.gov/global/viewing-files" target="_blank" title=
+        "Viewing Files">Viewing Files</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href=
+        "http://www.cancer.gov/global/web/policies/foia" title=
+        "FOIA">FOIA</a><br>
+        <br></p>
+        <p><a href="http://www.dhhs.gov/">Department of Health and Human
+        Services</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href=
+        "http://www.nih.gov/">National Institutes of
+        Health</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href=
+        "http://www.cancer.gov/">National Cancer
+        Institute</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href=
+        "http://www.usa.gov/">USA.gov</a></p>
+        <p>NIH...Turning Discovery Into Health</p>
     </div>
-  </body>
+</body>
 </html>

@@ -3,11 +3,8 @@ from wtforms import StringField, TextAreaField
 from wtforms.validators import Email, Required, Length
 from flask import request
 
-
- 
+""" define Contact Form and it's fields """
 class ContactForm(Form):
-	def reset():
-		pass
 	first_name = StringField("First Name", validators=[Required("First Name is required.")])
 	last_name = StringField("Last Name", validators=[Required("Last Name is required.")])
 	organization = StringField("Organization",validators=[Required("Organization is required.")])
