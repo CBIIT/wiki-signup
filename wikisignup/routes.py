@@ -11,3 +11,6 @@ def contact():
     return redirect('/success') # redirect to success page if it passes #
   return render_template('home.html', form=form) # render template again if fails #
 
+@app.route('/success')
+def success():
+	return render_template('success.html')
