@@ -5,12 +5,21 @@ from flask import request
 
 """ define Contact Form and it's fields """
 class ContactForm(Form):
-	first_name = StringField("First Name", validators=[Required("First Name is required.")])
-	last_name = StringField("Last Name", validators=[Required("Last Name is required.")])
-	organization = StringField("Organization",validators=[Required("Organization is required.")])
-	email = StringField("Email", validators=[Email()])
-	phone = StringField("Phone Number",validators=[Required("Phone Number is required.")])
-	userName = StringField("NIH User Name")
-	areaOfInterest = TextAreaField("Wiki Area of Interest",validators=[Required("Wiki Area of Interest is required.")])
+	fields = [
+			{'field':'first_name','field_name':'First Name', 'validator':[Required("First Name is required.")]},
+			{'field':'last_name','field_name':'Last Name', 'validator':[Required("Last Name is required.")]},
+			{'field':'organization','field_name':'Organization', 'validator':[Required("Organization is required.")]},
+			{'field':'email','field_name':'Email', 'validator':[Email()]},
+			{'field':'phone','field_name':'Phone Number', 'validator':[Required("Phone Number is required.")]},
+			{'field':'userName','field_name':'NIH User Name'},
+			{'field':'areaOfInterest','field_name':'Wiki Area of Interest', 'validator':[Required("Wiki Area of Interest is required.")]}
+			]
+	for x in fields:
+		print x.has_key('validator')
+		if (x.has_key('validator')):
+			setattr(Form,x['field'],StringField(x['field_name'], validators=x['validator']))
+		else:	
+			setattr(Form,x['field'],StringField(x['field_name']))
+
 	submit = StringField("Submit")
 	clear = StringField("Clear")	
