@@ -1,0 +1,54 @@
+body {
+    margin: 0px;
+    padding: 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #444;
+    font-size:80%;
+}
+a.skipnav {
+    display: block;
+    height: 1px;
+}
+#maincontent {
+    margin: 10px;
+    padding: 10px;
+}
+    #maincontent .field { padding: 0px 0px 20px 0px }
+    #maincontent .errors {
+        background-color: #ffffa5;
+        border: 1px solid red;
+        margin-bottom: 10px;
+        padding: 10px;
+        font-weight: bold;
+    }
+    #maincontent .field.error {
+        background-color: #ffffa5;
+        border: 1px solid red;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+    #maincontent .field .field_error { padding-bottom: 5px }
+    #maincontent .field label {
+        font-weight: bold;
+        padding-bottom: 5px;
+        vertical-align: top;
+        display: block;
+    }
+    #maincontent .field.required label::after {
+        content: "";
+        display: inline-block;
+        background-color: red;
+        margin-left: 3px;
+        top: -1px;
+        position: relative;
+        width: 6px;
+        height: 6px;
+    }
+    #maincontent .field .formHelp {
+        color: #5a5d5a;
+        padding: 2px 0px 2px 0px;
+    }
+.footer {
+	width:100%;
+	text-align:center;
+}
