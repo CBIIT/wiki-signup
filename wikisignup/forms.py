@@ -15,7 +15,6 @@ class ContactForm(Form):
 			{'field':'areaOfInterest','field_name':'Wiki Area of Interest', 'validator':[Required("Wiki Area of Interest is required.")]}
 			]
 	for x in fields:
-		print x.has_key('validator')
 		if (x.has_key('validator')):
 			setattr(Form,x['field'],StringField(x['field_name'], validators=x['validator']))
 		else:	
