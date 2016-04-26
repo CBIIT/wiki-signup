@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+ 
+{% block content %}
+  <h2>NCI Wiki new account request</h2>
+  <form action="/" method=post>
+    {{ form.hidden_tag() }}
+	{% if form.errors|length %}
+		<div class="errors">Please correct the errors indicated below.</div>
+	{% endif %}
+
+	<div class="field {% if form.first_name.errors|length and request %} error {% endif %} required">
+		{% if form.first_name.errors|length %}
+			<div class="field_error">{{form.first_name.errors[0]}}</div>
+		{% endif %}
+		{{ form.first_name.label }}
+		{{ form.first_name }}
+	</div>
+
+	<div class="field {% if form.last_name.errors|length %} error{% endif %} required">
+		{% if form.last_name.errors|length %}
+			<div class="field_error">{{form.last_name.errors[0]}}</div>
+		{% endif %}
+		{{ form.last_name.label }}
+		{{ form.last_name }}
+	</div>
+
+
+	<div class="field {% if form.organization.errors|length %} error{% endif %} required"> 
+		{% if form.organization.errors|length %}
+			<div class="field_error">{{form.organization.errors[0]}}</div>
+		{% endif %}
+
+		{{ form.organization.label }}
+		{{ form.organization }}
+	</div>
+
+	<div class="field {% if form.email.errors|length %} error{% endif %} required"> 
+		{% if form.email.errors|length %}
+			<div class="field_error">{{form.email.errors[0]}}</div>
+		{% endif %}
+
+		{{ form.email.label }}
+		{{ form.email }}
+	</div>
+	<div class="field {% if form.phone.errors|length %} error{% endif %} required"> 
+		{% if form.phone.errors|length %}
+			<div class="field_error">{{form.phone.errors[0]}}</div>
+		{% endif %}
+
+		{{ form.phone.label }}
+		{{ form.phone }}
+	</div>
+
+	<div class="field"> 
+		{{ form.userName.label }}
+		{{ form.userName }}
+	</div>	
+
+	<div class="field {% if form.areaOfInterest.errors|length %} error{% endif %} required"> 
+		{% if form.areaOfInterest.errors|length %}
+			<div class="field_error">{{form.areaOfInterest.errors[0]}}</div>
+		{% endif %}
+
+		{{ form.areaOfInterest.label }}
+		{{ form.areaOfInterest(rows='5',cols='50')}}
+	</div>			
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Clear">
+
+  </form>
+{% endblock %}
