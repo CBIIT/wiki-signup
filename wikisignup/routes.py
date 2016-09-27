@@ -14,7 +14,7 @@ def contact():
 		for x in form.fields:
 			body+='%s : %s\n' % (x['field_name'],form[x['field']].data)
 		msg = Message("NCI Wiki new account request", sender=form.email.data,
-	                  recipients=["einolfs@mail.nih.gov"],
+	                  recipients=["ncicbiit@mail.nih.gov"],
 	                  body=body)
 		mail.send(msg)
 		return redirect('/success') # redirect to success page if it passes #
