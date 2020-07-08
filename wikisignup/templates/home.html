@@ -2,6 +2,9 @@
  
 {% block content %}
   <h2>NCI Wiki new account request</h2>
+  <div class="internalForm">
+      Use this form if you are an internal user that already has an NIH account through iTrust. Otherwise, request a federated account at <a href="https://userregistration.nci.nih.gov" target="_blank">https://userregistration.nci.nih.gov</a>.
+  </div>
   <form action="/" method=post>
     {{ form.hidden_tag() }}
 	{% if form.errors|length %}
