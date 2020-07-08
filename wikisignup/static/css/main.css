@@ -52,3 +52,9 @@ a.skipnav {
 	width:100%;
 	text-align:center;
 }
+
+.internalForm {
+        padding-bottom:10px;
+        font-style:italic;
+        color:#717171
+}
